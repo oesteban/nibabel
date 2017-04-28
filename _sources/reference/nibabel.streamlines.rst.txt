@@ -1,0 +1,299 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+:mod:`streamlines`
+==================
+.. automodule:: nibabel.streamlines
+
+.. currentmodule:: nibabel.streamlines
+.. autosummary::
+
+
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+Module: :mod:`streamlines.array_sequence`
+-----------------------------------------
+.. automodule:: nibabel.streamlines.array_sequence
+
+.. currentmodule:: nibabel.streamlines.array_sequence
+.. autosummary::
+
+   ArraySequence
+
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+Module: :mod:`streamlines.header`
+---------------------------------
+.. automodule:: nibabel.streamlines.header
+
+.. currentmodule:: nibabel.streamlines.header
+.. autosummary::
+
+   Field
+
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+Module: :mod:`streamlines.tractogram`
+-------------------------------------
+.. automodule:: nibabel.streamlines.tractogram
+
+.. currentmodule:: nibabel.streamlines.tractogram
+.. autosummary::
+
+   LazyDict
+   LazyTractogram
+   PerArrayDict
+   PerArraySequenceDict
+   SliceableDataDict
+   Tractogram
+   TractogramItem
+
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+Module: :mod:`streamlines.tractogram_file`
+------------------------------------------
+.. automodule:: nibabel.streamlines.tractogram_file
+
+.. currentmodule:: nibabel.streamlines.tractogram_file
+.. autosummary::
+
+   DataError
+   ExtensionWarning
+   HeaderError
+   HeaderWarning
+   TractogramFile
+   abstractclassmethod
+
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+Module: :mod:`streamlines.trk`
+------------------------------
+.. automodule:: nibabel.streamlines.trk
+
+.. currentmodule:: nibabel.streamlines.trk
+.. autosummary::
+
+   TrkFile
+
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+Module: :mod:`streamlines.utils`
+--------------------------------
+.. automodule:: nibabel.streamlines.utils
+
+.. currentmodule:: nibabel.streamlines.utils
+.. autosummary::
+
+
+
+.. currentmodule:: nibabel.streamlines
+
+
+.. currentmodule:: nibabel.streamlines.array_sequence
+
+
+:class:`ArraySequence`
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: ArraySequence
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+.. currentmodule:: nibabel.streamlines.header
+
+
+:class:`Field`
+~~~~~~~~~~~~~~
+
+
+.. autoclass:: Field
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+.. currentmodule:: nibabel.streamlines.tractogram
+
+
+:class:`LazyDict`
+~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: LazyDict
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`LazyTractogram`
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: LazyTractogram
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`PerArrayDict`
+~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: PerArrayDict
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`PerArraySequenceDict`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: PerArraySequenceDict
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`SliceableDataDict`
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: SliceableDataDict
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`Tractogram`
+~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: Tractogram
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`TractogramItem`
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: TractogramItem
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+.. currentmodule:: nibabel.streamlines.tractogram_file
+
+
+:class:`DataError`
+~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: DataError
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`ExtensionWarning`
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: ExtensionWarning
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`HeaderError`
+~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: HeaderError
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`HeaderWarning`
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: HeaderWarning
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`TractogramFile`
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: TractogramFile
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`abstractclassmethod`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: abstractclassmethod
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+.. currentmodule:: nibabel.streamlines.trk
+
+
+:class:`TrkFile`
+~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: TrkFile
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+.. currentmodule:: nibabel.streamlines.utils
+

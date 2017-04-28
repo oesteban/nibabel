@@ -1,0 +1,13 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+:mod:`processing`
+=================
+.. automodule:: nibabel.processing
+
+.. currentmodule:: nibabel.processing
+.. autosummary::
+
+
+
+.. currentmodule:: nibabel.processing
+

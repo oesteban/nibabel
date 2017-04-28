@@ -1,0 +1,26 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+:mod:`orientations`
+===================
+.. automodule:: nibabel.orientations
+
+.. currentmodule:: nibabel.orientations
+.. autosummary::
+
+   OrientationError
+
+
+.. currentmodule:: nibabel.orientations
+
+
+:class:`OrientationError`
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: OrientationError
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+

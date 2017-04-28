@@ -1,0 +1,13 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+:mod:`py3k`
+===========
+.. automodule:: nibabel.py3k
+
+.. currentmodule:: nibabel.py3k
+.. autosummary::
+
+
+
+.. currentmodule:: nibabel.py3k
+

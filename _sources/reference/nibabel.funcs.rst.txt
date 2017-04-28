@@ -1,0 +1,13 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+:mod:`funcs`
+============
+.. automodule:: nibabel.funcs
+
+.. currentmodule:: nibabel.funcs
+.. autosummary::
+
+
+
+.. currentmodule:: nibabel.funcs
+

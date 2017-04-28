@@ -1,0 +1,65 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+:mod:`parrec`
+=============
+.. automodule:: nibabel.parrec
+
+.. currentmodule:: nibabel.parrec
+.. autosummary::
+
+   PARRECArrayProxy
+   PARRECError
+   PARRECHeader
+   PARRECImage
+
+
+.. currentmodule:: nibabel.parrec
+
+
+:class:`PARRECArrayProxy`
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: PARRECArrayProxy
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`PARRECError`
+~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: PARRECError
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`PARRECHeader`
+~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: PARRECHeader
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`PARRECImage`
+~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: PARRECImage
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+

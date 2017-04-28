@@ -1,0 +1,13 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+:mod:`spaces`
+=============
+.. automodule:: nibabel.spaces
+
+.. currentmodule:: nibabel.spaces
+.. autosummary::
+
+
+
+.. currentmodule:: nibabel.spaces
+

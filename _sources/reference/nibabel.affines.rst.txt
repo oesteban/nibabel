@@ -1,0 +1,26 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+:mod:`affines`
+==============
+.. automodule:: nibabel.affines
+
+.. currentmodule:: nibabel.affines
+.. autosummary::
+
+   AffineError
+
+
+.. currentmodule:: nibabel.affines
+
+
+:class:`AffineError`
+~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: AffineError
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+

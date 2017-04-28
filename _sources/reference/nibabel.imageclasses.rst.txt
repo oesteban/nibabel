@@ -1,0 +1,39 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+:mod:`imageclasses`
+===================
+.. automodule:: nibabel.imageclasses
+
+.. currentmodule:: nibabel.imageclasses
+.. autosummary::
+
+   ClassMapDict
+   ExtMapRecoder
+
+
+.. currentmodule:: nibabel.imageclasses
+
+
+:class:`ClassMapDict`
+~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: ClassMapDict
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`ExtMapRecoder`
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: ExtMapRecoder
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+

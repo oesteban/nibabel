@@ -1,0 +1,91 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+:mod:`benchmarks`
+=================
+.. automodule:: nibabel.benchmarks
+
+.. currentmodule:: nibabel.benchmarks
+.. autosummary::
+
+
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+Module: :mod:`benchmarks.bench_array_to_file`
+---------------------------------------------
+.. automodule:: nibabel.benchmarks.bench_array_to_file
+
+.. currentmodule:: nibabel.benchmarks.bench_array_to_file
+.. autosummary::
+
+
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+Module: :mod:`benchmarks.bench_fileslice`
+-----------------------------------------
+.. automodule:: nibabel.benchmarks.bench_fileslice
+
+.. currentmodule:: nibabel.benchmarks.bench_fileslice
+.. autosummary::
+
+
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+Module: :mod:`benchmarks.bench_finite_range`
+--------------------------------------------
+.. automodule:: nibabel.benchmarks.bench_finite_range
+
+.. currentmodule:: nibabel.benchmarks.bench_finite_range
+.. autosummary::
+
+
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+Module: :mod:`benchmarks.bench_load_save`
+-----------------------------------------
+.. automodule:: nibabel.benchmarks.bench_load_save
+
+.. currentmodule:: nibabel.benchmarks.bench_load_save
+.. autosummary::
+
+
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+Module: :mod:`benchmarks.bench_streamlines`
+-------------------------------------------
+.. automodule:: nibabel.benchmarks.bench_streamlines
+
+.. currentmodule:: nibabel.benchmarks.bench_streamlines
+.. autosummary::
+
+
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+Module: :mod:`benchmarks.butils`
+--------------------------------
+.. automodule:: nibabel.benchmarks.butils
+
+.. currentmodule:: nibabel.benchmarks.butils
+.. autosummary::
+
+
+
+.. currentmodule:: nibabel.benchmarks
+
+
+.. currentmodule:: nibabel.benchmarks.bench_array_to_file
+
+
+.. currentmodule:: nibabel.benchmarks.bench_fileslice
+
+
+.. currentmodule:: nibabel.benchmarks.bench_finite_range
+
+
+.. currentmodule:: nibabel.benchmarks.bench_load_save
+
+
+.. currentmodule:: nibabel.benchmarks.bench_streamlines
+
+
+.. currentmodule:: nibabel.benchmarks.butils
+

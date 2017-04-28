@@ -1,0 +1,13 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+:mod:`keywordonly`
+==================
+.. automodule:: nibabel.keywordonly
+
+.. currentmodule:: nibabel.keywordonly
+.. autosummary::
+
+
+
+.. currentmodule:: nibabel.keywordonly
+

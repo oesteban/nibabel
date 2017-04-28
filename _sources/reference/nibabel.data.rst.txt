@@ -1,0 +1,78 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+:mod:`data`
+===========
+.. automodule:: nibabel.data
+
+.. currentmodule:: nibabel.data
+.. autosummary::
+
+   Bomber
+   BomberError
+   DataError
+   Datasource
+   VersionedDatasource
+
+
+.. currentmodule:: nibabel.data
+
+
+:class:`Bomber`
+~~~~~~~~~~~~~~~
+
+
+.. autoclass:: Bomber
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`BomberError`
+~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: BomberError
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`DataError`
+~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: DataError
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`Datasource`
+~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: Datasource
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`VersionedDatasource`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: VersionedDatasource
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+

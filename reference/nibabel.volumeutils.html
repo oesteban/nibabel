@@ -1,0 +1,422 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Neuroimaging in Python &#8212; NiBabel 2.2.0dev documentation</title>
+    
+    <link rel="stylesheet" href="../_static/nibabel.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.2.0dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="arraywriters" href="nibabel.arraywriters.html" />
+    <link rel="prev" title="spatialimages" href="nibabel.spatialimages.html" />
+  <meta name="keywords" content="nipy, neuroimaging, python, neuroscience">
+
+  </head>
+  <body role="document">
+<div style="background-color: white; text-align: left; padding-left: 150px; padding-bottom:50px; padding-top:20px; background-image: url(../_static/nipy-logo-bg-138x120.png); background-repeat: no-repeat;">
+<h1>NiBabel</h1>
+<h3 style="margin-top:-5px;color:#2f83c8">Access a cacophony of neuro-imaging file formats</h3>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="nibabel.arraywriters.html" title="arraywriters"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="nibabel.spatialimages.html" title="spatialimages"
+             accesskey="P">previous</a> |</li>
+  <li><a href="http://nipy.org/">Community</a> |&nbsp;</li>
+  <li><a href="../index.html">NiBabel Home</a> |&nbsp;</li>
+  <li><a href="https://mail.python.org/mailman/listinfo/neuroimaging">Mailing list</a> |&nbsp;</li>
+  <li><a href="legal.html">License</a> |&nbsp;</li>
+
+          <li class="nav-item nav-item-1"><a href="../api.html" accesskey="U">API Documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">volumeutils</span></code></a><ul>
+<li><a class="reference internal" href="#binopener"><code class="docutils literal"><span class="pre">BinOpener</span></code></a></li>
+<li><a class="reference internal" href="#dtypemapper"><code class="docutils literal"><span class="pre">DtypeMapper</span></code></a></li>
+<li><a class="reference internal" href="#recoder"><code class="docutils literal"><span class="pre">Recoder</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="nibabel.spatialimages.html"
+                        title="previous chapter"><code class="docutils literal"><span class="pre">spatialimages</span></code></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="nibabel.arraywriters.html"
+                        title="next chapter"><code class="docutils literal"><span class="pre">arraywriters</span></code></a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/reference/nibabel.volumeutils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<p><img src="../_static/reggie.png" alt="Reggie -- the one" /></p>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-nibabel.volumeutils">
+<span id="volumeutils"></span><h1><code class="xref py py-mod docutils literal"><span class="pre">volumeutils</span></code><a class="headerlink" href="#module-nibabel.volumeutils" title="Permalink to this headline">¶</a></h1>
+<p>Utility functions for analyze-like formats</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#nibabel.volumeutils.BinOpener" title="nibabel.volumeutils.BinOpener"><code class="xref py py-obj docutils literal"><span class="pre">BinOpener</span></code></a>(\*args,&nbsp;\*\*kwargs)</td>
+<td>Class to accept, maybe open, and context-manage file-likes / filenames</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#nibabel.volumeutils.DtypeMapper" title="nibabel.volumeutils.DtypeMapper"><code class="xref py py-obj docutils literal"><span class="pre">DtypeMapper</span></code></a>()</td>
+<td>Specialized mapper for numpy dtypes</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#nibabel.volumeutils.Recoder" title="nibabel.volumeutils.Recoder"><code class="xref py py-obj docutils literal"><span class="pre">Recoder</span></code></a>(codes[,&nbsp;fields,&nbsp;map_maker])</td>
+<td>class to return canonical code(s) from code or aliases</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="binopener">
+<h2><a class="reference internal" href="#nibabel.volumeutils.BinOpener" title="nibabel.volumeutils.BinOpener"><code class="xref py py-class docutils literal"><span class="pre">BinOpener</span></code></a><a class="headerlink" href="#binopener" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="nibabel.volumeutils.BinOpener">
+<em class="property">class </em><code class="descclassname">nibabel.volumeutils.</code><code class="descname">BinOpener</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#nibabel.volumeutils.BinOpener" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nibabel.openers.html#nibabel.openers.Opener" title="nibabel.openers.Opener"><code class="xref py py-class docutils literal"><span class="pre">nibabel.openers.Opener</span></code></a></p>
+<p>Class to accept, maybe open, and context-manage file-likes / filenames</p>
+<p>Provides context manager to close files that the constructor opened for
+you.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fileish</strong> : str or file-like</p>
+<blockquote>
+<div><p>if str, then open with suitable opening method. If file-like, accept as
+is</p>
+</div></blockquote>
+<p><strong>*args</strong> : positional arguments</p>
+<blockquote>
+<div><p>passed to opening method when <cite>fileish</cite> is str.  <code class="docutils literal"><span class="pre">mode</span></code>, if not
+specified, is <cite>rb</cite>.  <code class="docutils literal"><span class="pre">compresslevel</span></code>, if relevant, and not specified,
+is set from class variable <code class="docutils literal"><span class="pre">default_compresslevel</span></code></p>
+</div></blockquote>
+<p><strong>**kwargs</strong> : keyword arguments</p>
+<blockquote class="last">
+<div><p>passed to opening method when <cite>fileish</cite> is str.  Change of defaults as
+for *args</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p>BinOpener class deprecated. Please use Opener class instead.2.1</p>
+<ul class="simple">
+<li>deprecated from version: 4.0</li>
+</ul>
+<dl class="method">
+<dt id="nibabel.volumeutils.BinOpener.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#nibabel.volumeutils.BinOpener.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>BinOpener class deprecated. Please use Opener class instead.2.1</p>
+<ul class="simple">
+<li>deprecated from version: 4.0</li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="dtypemapper">
+<h2><a class="reference internal" href="#nibabel.volumeutils.DtypeMapper" title="nibabel.volumeutils.DtypeMapper"><code class="xref py py-class docutils literal"><span class="pre">DtypeMapper</span></code></a><a class="headerlink" href="#dtypemapper" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="nibabel.volumeutils.DtypeMapper">
+<em class="property">class </em><code class="descclassname">nibabel.volumeutils.</code><code class="descname">DtypeMapper</code><a class="headerlink" href="#nibabel.volumeutils.DtypeMapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Specialized mapper for numpy dtypes</p>
+<p>We pass this mapper into the Recoder class to deal with numpy dtype
+hashing.</p>
+<p>The hashing problem is that dtypes that compare equal may not have the same
+hash.  This is true for numpys up to the current at time of writing
+(1.6.0).  For numpy 1.2.1 at least, even dtypes that look exactly the same
+in terms of fields don&#8217;t always have the same hash.  This makes dtypes
+difficult to use as keys in a dictionary.</p>
+<p>This class wraps a dictionary in order to implement a __getitem__ to deal
+with dtype hashing. If the key doesn&#8217;t appear to be in the mapping, and it
+is a dtype, we compare (using ==) all known dtype keys to the input key,
+and return any matching values for the matching key.</p>
+<dl class="method">
+<dt id="nibabel.volumeutils.DtypeMapper.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nibabel.volumeutils.DtypeMapper.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nibabel.volumeutils.DtypeMapper.keys">
+<code class="descname">keys</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nibabel.volumeutils.DtypeMapper.keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nibabel.volumeutils.DtypeMapper.values">
+<code class="descname">values</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nibabel.volumeutils.DtypeMapper.values" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="recoder">
+<h2><a class="reference internal" href="#nibabel.volumeutils.Recoder" title="nibabel.volumeutils.Recoder"><code class="xref py py-class docutils literal"><span class="pre">Recoder</span></code></a><a class="headerlink" href="#recoder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="nibabel.volumeutils.Recoder">
+<em class="property">class </em><code class="descclassname">nibabel.volumeutils.</code><code class="descname">Recoder</code><span class="sig-paren">(</span><em>codes</em>, <em>fields=('code'</em>, <em>)</em>, <em>map_maker=&lt;class 'dict'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#nibabel.volumeutils.Recoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>class to return canonical code(s) from code or aliases</p>
+<p>The concept is a lot easier to read in the implementation and
+tests than it is to explain, so...</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># If you have some codes, and several aliases, like this:</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">code1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">aliases1</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;first&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">code2</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">aliases2</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;second&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># You might want to do this:</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">codes</span> <span class="o">=</span> <span class="p">[[</span><span class="n">code1</span><span class="p">]</span><span class="o">+</span><span class="n">aliases1</span><span class="p">,[</span><span class="n">code2</span><span class="p">]</span><span class="o">+</span><span class="n">aliases2</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">recodes</span> <span class="o">=</span> <span class="n">Recoder</span><span class="p">(</span><span class="n">codes</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">recodes</span><span class="o">.</span><span class="n">code</span><span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">]</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">recodes</span><span class="o">.</span><span class="n">code</span><span class="p">[</span><span class="s1">&#39;second&#39;</span><span class="p">]</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">recodes</span><span class="o">.</span><span class="n">code</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Or maybe you have a code, a label and some aliases</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">codes</span><span class="o">=</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;label1&#39;</span><span class="p">,</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;first&#39;</span><span class="p">),(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;label2&#39;</span><span class="p">,</span><span class="s1">&#39;two&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># you might want to get back the code or the label</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">recodes</span> <span class="o">=</span> <span class="n">Recoder</span><span class="p">(</span><span class="n">codes</span><span class="p">,</span> <span class="n">fields</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;code&#39;</span><span class="p">,</span><span class="s1">&#39;label&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">recodes</span><span class="o">.</span><span class="n">code</span><span class="p">[</span><span class="s1">&#39;first&#39;</span><span class="p">]</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">recodes</span><span class="o">.</span><span class="n">code</span><span class="p">[</span><span class="s1">&#39;label1&#39;</span><span class="p">]</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">recodes</span><span class="o">.</span><span class="n">label</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">&#39;label2&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># For convenience, you can get the first entered name by</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># indexing the object directly</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">recodes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+<p>Create recoder object</p>
+<p><code class="docutils literal"><span class="pre">codes</span></code> give a sequence of code, alias sequences
+<code class="docutils literal"><span class="pre">fields</span></code> are names by which the entries in these sequences can be
+accessed.</p>
+<p>By default <code class="docutils literal"><span class="pre">fields</span></code> gives the first column the name
+&#8220;code&#8221;.  The first column is the vector of first entries
+in each of the sequences found in <code class="docutils literal"><span class="pre">codes</span></code>.  Thence you can
+get the equivalent first column value with ob.code[value],
+where value can be a first column value, or a value in any of
+the other columns in that sequence.</p>
+<p>You can give other columns names too, and access them in the
+same way - see the examples in the class docstring.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>codes</strong> : seqence of sequences</p>
+<blockquote>
+<div><p>Each sequence defines values (codes) that are equivalent</p>
+</div></blockquote>
+<p><strong>fields</strong> : {(&#8216;code&#8217;,) string sequence}, optional</p>
+<blockquote>
+<div><p>names by which elements in sequences can be accessed</p>
+</div></blockquote>
+<p><strong>map_maker: callable, optional</strong></p>
+<blockquote class="last">
+<div><p>constructor for dict-like objects used to store key value pairs.
+Default is <code class="docutils literal"><span class="pre">dict</span></code>.  <code class="docutils literal"><span class="pre">map_maker()</span></code> generates an empty mapping.
+The mapping need only implement <code class="docutils literal"><span class="pre">__getitem__,</span> <span class="pre">__setitem__,</span> <span class="pre">keys,</span>
+<span class="pre">values</span></code>.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="nibabel.volumeutils.Recoder.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>codes</em>, <em>fields=('code'</em>, <em>)</em>, <em>map_maker=&lt;class 'dict'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#nibabel.volumeutils.Recoder.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create recoder object</p>
+<p><code class="docutils literal"><span class="pre">codes</span></code> give a sequence of code, alias sequences
+<code class="docutils literal"><span class="pre">fields</span></code> are names by which the entries in these sequences can be
+accessed.</p>
+<p>By default <code class="docutils literal"><span class="pre">fields</span></code> gives the first column the name
+&#8220;code&#8221;.  The first column is the vector of first entries
+in each of the sequences found in <code class="docutils literal"><span class="pre">codes</span></code>.  Thence you can
+get the equivalent first column value with ob.code[value],
+where value can be a first column value, or a value in any of
+the other columns in that sequence.</p>
+<p>You can give other columns names too, and access them in the
+same way - see the examples in the class docstring.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>codes</strong> : seqence of sequences</p>
+<blockquote>
+<div><p>Each sequence defines values (codes) that are equivalent</p>
+</div></blockquote>
+<p><strong>fields</strong> : {(&#8216;code&#8217;,) string sequence}, optional</p>
+<blockquote>
+<div><p>names by which elements in sequences can be accessed</p>
+</div></blockquote>
+<p><strong>map_maker: callable, optional</strong></p>
+<blockquote class="last">
+<div><p>constructor for dict-like objects used to store key value pairs.
+Default is <code class="docutils literal"><span class="pre">dict</span></code>.  <code class="docutils literal"><span class="pre">map_maker()</span></code> generates an empty mapping.
+The mapping need only implement <code class="docutils literal"><span class="pre">__getitem__,</span> <span class="pre">__setitem__,</span> <span class="pre">keys,</span>
+<span class="pre">values</span></code>.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="nibabel.volumeutils.Recoder.add_codes">
+<code class="descname">add_codes</code><span class="sig-paren">(</span><em>code_syn_seqs</em><span class="sig-paren">)</span><a class="headerlink" href="#nibabel.volumeutils.Recoder.add_codes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add codes to object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>code_syn_seqs</strong> : sequence</p>
+<blockquote class="last">
+<div><p>sequence of sequences, where each sequence <code class="docutils literal"><span class="pre">S</span> <span class="pre">=</span> <span class="pre">code_syn_seqs[n]</span></code>
+for n in 0..len(code_syn_seqs), is a sequence giving values in the
+same order as <code class="docutils literal"><span class="pre">self.fields</span></code>.  Each S should be at least of the
+same length as <code class="docutils literal"><span class="pre">self.fields</span></code>.  After this call, if <code class="docutils literal"><span class="pre">self.fields</span>
+<span class="pre">==</span> <span class="pre">['field1',</span> <span class="pre">'field2'],</span> <span class="pre">then</span> <span class="pre">``self.field1[S[n]]</span> <span class="pre">==</span> <span class="pre">S[0]</span></code> for all
+n in 0..len(S) and <code class="docutils literal"><span class="pre">self.field2[S[n]]</span> <span class="pre">==</span> <span class="pre">S[1]</span></code> for all n in
+0..len(S).</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">code_syn_seqs</span> <span class="o">=</span> <span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;one&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span> <span class="o">=</span> <span class="n">Recoder</span><span class="p">(</span><span class="n">code_syn_seqs</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="o">.</span><span class="n">value_set</span><span class="p">()</span> <span class="o">==</span> <span class="nb">set</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="o">.</span><span class="n">add_codes</span><span class="p">(((</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;first&#39;</span><span class="p">)))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rc</span><span class="o">.</span><span class="n">value_set</span><span class="p">()</span> <span class="o">==</span> <span class="nb">set</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="nibabel.volumeutils.Recoder.keys">
+<code class="descname">keys</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nibabel.volumeutils.Recoder.keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all available code and alias values</p>
+<p>Returns same value as <code class="docutils literal"><span class="pre">obj.field1.keys()</span></code> and, with the
+default initializing <code class="docutils literal"><span class="pre">fields</span></code> argument of fields=(&#8216;code&#8217;,),
+this will return the same as <code class="docutils literal"><span class="pre">obj.code.keys()</span></code></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">codes</span> <span class="o">=</span> <span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;one&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;repeat value&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">k</span> <span class="o">=</span> <span class="n">Recoder</span><span class="p">(</span><span class="n">codes</span><span class="p">)</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">set</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">==</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;repeat value&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">])</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="nibabel.volumeutils.Recoder.value_set">
+<code class="descname">value_set</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#nibabel.volumeutils.Recoder.value_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return set of possible returned values for column</p>
+<p>By default, the column is the first column.</p>
+<p>Returns same values as <code class="docutils literal"><span class="pre">set(obj.field1.values())</span></code> and,
+with the default initializing``fields`` argument of
+fields=(&#8216;code&#8217;,), this will return the same as
+<code class="docutils literal"><span class="pre">set(obj.code.values())</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>name</strong> : {None, string}</p>
+<blockquote>
+<div><p>Where default of none gives result for first column</p>
+</div></blockquote>
+<p><strong>&gt;&gt;&gt; codes = ((1, &#8216;one&#8217;), (2, &#8216;two&#8217;), (1, &#8216;repeat value&#8217;))</strong></p>
+<p><strong>&gt;&gt;&gt; vs = Recoder(codes).value_set()</strong></p>
+<p><strong>&gt;&gt;&gt; vs == set([1, 2]) # Sets are not ordered, hence this test</strong></p>
+<p><strong>True</strong></p>
+<p><strong>&gt;&gt;&gt; rc = Recoder(codes, fields=(&#8216;code&#8217;, &#8216;label&#8217;))</strong></p>
+<p><strong>&gt;&gt;&gt; rc.value_set(&#8216;label&#8217;) == set((&#8216;one&#8217;, &#8216;two&#8217;, &#8216;repeat value&#8217;))</strong></p>
+<p class="last"><strong>True</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2017, Matthew Brett, Michael Hanke, Eric Larson, Chris Markiewicz &lt;neuroimaging@python.org&gt;.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
+    </div>
+  </body>
+</html>

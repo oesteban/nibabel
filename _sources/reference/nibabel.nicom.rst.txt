@@ -1,0 +1,221 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+:mod:`nicom`
+============
+.. automodule:: nibabel.nicom
+
+.. currentmodule:: nibabel.nicom
+.. autosummary::
+
+
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+Module: :mod:`nicom.csareader`
+------------------------------
+.. automodule:: nibabel.nicom.csareader
+
+.. currentmodule:: nibabel.nicom.csareader
+.. autosummary::
+
+   CSAError
+   CSAReadError
+
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+Module: :mod:`nicom.dicomreaders`
+---------------------------------
+.. automodule:: nibabel.nicom.dicomreaders
+
+.. currentmodule:: nibabel.nicom.dicomreaders
+.. autosummary::
+
+   DicomReadError
+
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+Module: :mod:`nicom.dicomwrappers`
+----------------------------------
+.. automodule:: nibabel.nicom.dicomwrappers
+
+.. currentmodule:: nibabel.nicom.dicomwrappers
+.. autosummary::
+
+   MosaicWrapper
+   MultiframeWrapper
+   SiemensWrapper
+   Wrapper
+   WrapperError
+   WrapperPrecisionError
+
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+Module: :mod:`nicom.dwiparams`
+------------------------------
+.. automodule:: nibabel.nicom.dwiparams
+
+.. currentmodule:: nibabel.nicom.dwiparams
+.. autosummary::
+
+
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+Module: :mod:`nicom.structreader`
+---------------------------------
+.. automodule:: nibabel.nicom.structreader
+
+.. currentmodule:: nibabel.nicom.structreader
+.. autosummary::
+
+   Unpacker
+
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+Module: :mod:`nicom.utils`
+--------------------------
+.. automodule:: nibabel.nicom.utils
+
+.. currentmodule:: nibabel.nicom.utils
+.. autosummary::
+
+
+
+.. currentmodule:: nibabel.nicom
+
+
+.. currentmodule:: nibabel.nicom.csareader
+
+
+:class:`CSAError`
+~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: CSAError
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`CSAReadError`
+~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: CSAReadError
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+.. currentmodule:: nibabel.nicom.dicomreaders
+
+
+:class:`DicomReadError`
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: DicomReadError
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+.. currentmodule:: nibabel.nicom.dicomwrappers
+
+
+:class:`MosaicWrapper`
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: MosaicWrapper
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`MultiframeWrapper`
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: MultiframeWrapper
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`SiemensWrapper`
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: SiemensWrapper
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`Wrapper`
+~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: Wrapper
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`WrapperError`
+~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: WrapperError
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`WrapperPrecisionError`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: WrapperPrecisionError
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+.. currentmodule:: nibabel.nicom.dwiparams
+
+
+.. currentmodule:: nibabel.nicom.structreader
+
+
+:class:`Unpacker`
+~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: Unpacker
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+.. currentmodule:: nibabel.nicom.utils
+

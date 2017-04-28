@@ -1,0 +1,39 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+:mod:`casting`
+==============
+.. automodule:: nibabel.casting
+
+.. currentmodule:: nibabel.casting
+.. autosummary::
+
+   CastingError
+   FloatingError
+
+
+.. currentmodule:: nibabel.casting
+
+
+:class:`CastingError`
+~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: CastingError
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`FloatingError`
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: FloatingError
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+

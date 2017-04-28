@@ -1,0 +1,26 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+:mod:`arrayproxy`
+=================
+.. automodule:: nibabel.arrayproxy
+
+.. currentmodule:: nibabel.arrayproxy
+.. autosummary::
+
+   ArrayProxy
+
+
+.. currentmodule:: nibabel.arrayproxy
+
+
+:class:`ArrayProxy`
+~~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: ArrayProxy
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+

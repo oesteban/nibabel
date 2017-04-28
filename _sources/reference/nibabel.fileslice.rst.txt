@@ -1,0 +1,13 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+:mod:`fileslice`
+================
+.. automodule:: nibabel.fileslice
+
+.. currentmodule:: nibabel.fileslice
+.. autosummary::
+
+
+
+.. currentmodule:: nibabel.fileslice
+

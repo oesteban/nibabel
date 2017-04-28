@@ -1,0 +1,13 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+:mod:`optpkg`
+=============
+.. automodule:: nibabel.optpkg
+
+.. currentmodule:: nibabel.optpkg
+.. autosummary::
+
+
+
+.. currentmodule:: nibabel.optpkg
+

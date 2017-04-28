@@ -1,0 +1,13 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+:mod:`environment`
+==================
+.. automodule:: nibabel.environment
+
+.. currentmodule:: nibabel.environment
+.. autosummary::
+
+
+
+.. currentmodule:: nibabel.environment
+

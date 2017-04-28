@@ -1,0 +1,13 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+:mod:`parrec2nii_cmd`
+=====================
+.. automodule:: nibabel.parrec2nii_cmd
+
+.. currentmodule:: nibabel.parrec2nii_cmd
+.. autosummary::
+
+
+
+.. currentmodule:: nibabel.parrec2nii_cmd
+

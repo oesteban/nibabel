@@ -1,0 +1,13 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+:mod:`eulerangles`
+==================
+.. automodule:: nibabel.eulerangles
+
+.. currentmodule:: nibabel.eulerangles
+.. autosummary::
+
+
+
+.. currentmodule:: nibabel.eulerangles
+

@@ -1,0 +1,78 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+:mod:`freesurfer`
+=================
+.. automodule:: nibabel.freesurfer
+
+.. currentmodule:: nibabel.freesurfer
+.. autosummary::
+
+
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+Module: :mod:`freesurfer.io`
+----------------------------
+.. automodule:: nibabel.freesurfer.io
+
+.. currentmodule:: nibabel.freesurfer.io
+.. autosummary::
+
+
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+Module: :mod:`freesurfer.mghformat`
+-----------------------------------
+.. automodule:: nibabel.freesurfer.mghformat
+
+.. currentmodule:: nibabel.freesurfer.mghformat
+.. autosummary::
+
+   MGHError
+   MGHHeader
+   MGHImage
+
+
+.. currentmodule:: nibabel.freesurfer
+
+
+.. currentmodule:: nibabel.freesurfer.io
+
+
+.. currentmodule:: nibabel.freesurfer.mghformat
+
+
+:class:`MGHError`
+~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: MGHError
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`MGHHeader`
+~~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: MGHHeader
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+
+
+:class:`MGHImage`
+~~~~~~~~~~~~~~~~~
+
+
+.. autoclass:: MGHImage
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+  .. automethod:: __init__
+

@@ -1,0 +1,13 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+:mod:`loadsave`
+===============
+.. automodule:: nibabel.loadsave
+
+.. currentmodule:: nibabel.loadsave
+.. autosummary::
+
+
+
+.. currentmodule:: nibabel.loadsave
+

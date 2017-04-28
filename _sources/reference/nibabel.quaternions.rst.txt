@@ -1,0 +1,13 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+:mod:`quaternions`
+==================
+.. automodule:: nibabel.quaternions
+
+.. currentmodule:: nibabel.quaternions
+.. autosummary::
+
+
+
+.. currentmodule:: nibabel.quaternions
+

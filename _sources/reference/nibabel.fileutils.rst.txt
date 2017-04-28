@@ -1,0 +1,13 @@
+.. AUTO-GENERATED FILE -- DO NOT EDIT!
+
+:mod:`fileutils`
+================
+.. automodule:: nibabel.fileutils
+
+.. currentmodule:: nibabel.fileutils
+.. autosummary::
+
+
+
+.. currentmodule:: nibabel.fileutils
+
