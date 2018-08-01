@@ -94,6 +94,7 @@ def main(**extra_args):
                           'nibabel.nicom.tests',
                           'nibabel.testing',
                           'nibabel.tests',
+                          'nibabel.transform',
                           'nibabel.benchmarks',
                           'nibabel.streamlines',
                           'nibabel.streamlines.tests',
