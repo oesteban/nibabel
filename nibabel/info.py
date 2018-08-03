@@ -210,3 +210,4 @@ ISRELEASE = _version_extra == ''
 VERSION = __version__
 PROVIDES = ["nibabel", 'nisext']
 REQUIRES = ["numpy (>=%s)" % NUMPY_MIN_VERSION]
+SETUP_REQUIRES = ["numpy (>=%s)" % NUMPY_MIN_VERSION, "cython"]
