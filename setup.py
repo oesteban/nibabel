@@ -64,16 +64,6 @@ pkg_chk('dicom',
         messages = custom_pydicom_messages)
 
 def main(**extra_args):
-    from setuptools.extension import Extension
-    from numpy import get_include
-
-    extensions = [Extension(
-        "nibabel.maths.bspline",
-        ["nibabel/maths/bspline.pyx"],
-        include_dirs=[get_include(), "/usr/local/include/"],
-        library_dirs=["/usr/lib/"]),
-    ]
-
     setup(name=INFO.NAME,
           maintainer=INFO.MAINTAINER,
           maintainer_email=INFO.MAINTAINER_EMAIL,
@@ -87,7 +77,6 @@ def main(**extra_args):
           author_email=INFO.AUTHOR_EMAIL,
           platforms=INFO.PLATFORMS,
           version=INFO.VERSION,
-          setup_requires=INFO.SETUP_REQUIRES,
           requires=INFO.REQUIRES,
           provides=INFO.PROVIDES,
           packages     = ['nibabel',
@@ -99,7 +88,6 @@ def main(**extra_args):
                           'nibabel.cifti2.tests',
                           'nibabel.cmdline',
                           'nibabel.cmdline.tests',
-                          'nibabel.maths',
                           'nibabel.nicom',
                           'nibabel.freesurfer',
                           'nibabel.freesurfer.tests',
@@ -134,7 +122,6 @@ def main(**extra_args):
                           pjoin('bin', 'nib-trk2tck'),
                           ],
           cmdclass = cmdclass,
-          ext_modules=extensions,
           **extra_args
          )
 
